@@ -104,9 +104,22 @@ pre{
   }
 }
 </style>
+ <script>
+    var i = 0;
+    var txt = "CSS Documentation";
+    var speed = 50;
+   function typewriter(){
+      if(i<txt.length)
+      {
+         document.getElementById('head').innerHTML += txt.charAt(i);
+         i++;
+         setTimeout(typewriter, speed);
+      }
+   }
+ </script>
 <body>
 <nav id="navbar">
-  <header>CSS Documentation</header>
+  <header id = "head">CSS Documentation</header>
   <a class="nav-link" href="#Introduction">Introduction</a>
    <a class="nav-link" href="#Learning_PathWay">Learning Pathway</a> 
   <a class="nav-link" href="#Methods_To_Use_CSS">Methods To Use CSS</a> 
